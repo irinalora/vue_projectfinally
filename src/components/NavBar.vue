@@ -1,22 +1,12 @@
 <template>
   <div class="flex items-center justify-between bg-gray-100 px-4 shadow">
-    <RouterLink to="/" class="py-4">Home</RouterLink>
-    <RouterLink to="/favorites">Favorites</RouterLink>
+    <RouterLink to="/" class="py-4 text-xl text-violet-900">Home</RouterLink>
+    <RouterLink to="/myspace" class="py-4 text-xl font-medium text-violet-900"
+      >MySpace</RouterLink
+    >
   </div>
 </template>
 
 <script>
-// import { useCart } from "../stores/cart";
-
-export default {
-  // setup() {
-  //   const cartStore = useCart();
-  //   return { cartStore };
-  // },
-  // computed: {
-  //   numItems() {
-  //     return this.cartStore.cartProducts.length;
-  //   },
-  // },
-};
+export default {};
 </script>
