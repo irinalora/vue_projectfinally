@@ -1,7 +1,9 @@
 <template>
   calendar
   <div v-for="day in days" :key="day">
-    <div>{{ day }}</div>
+    <div class="grid grid-cols-7">
+      {{ day }}
+    </div>
   </div>
 </template>
 
