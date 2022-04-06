@@ -1,8 +1,14 @@
 <template>
   <div>Home page</div>
-  <div v-if="loading">Loading...</div>
-  <div v-if="error" class="text-red-600">
-    {{ error }}
-  </div>
+  <Calendar />
 </template>
-<script></script>
+<script>
+import Calendar from "../components/Calendar.vue";
+
+export default {
+  name: "Home",
+  components: {
+    Calendar,
+  },
+};
+</script>
