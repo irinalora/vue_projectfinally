@@ -3,13 +3,6 @@
   <div class="grid grid-cols-7">
     <div v-for="day in days" :key="day">
       {{ day }}
-      <div>Mon</div>
-      <div>Tue</div>
-      <div>Wed</div>
-      <div>Thus</div>
-      <div>Friday</div>
-      <div>Sat</div>
-      <div>Sun</div>
     </div>
   </div>
 </template>
@@ -26,7 +19,7 @@ export default {
       let date = new Date(this.year, this.month, 1);
       let days = [];
       while (date.getMonth() === this.month) {
-        days.push(new Date(date));
+        days.push(new Date(date).getDate());
         date.setDate(date.getDate() + 1);
       }
       return days;
