@@ -1,12 +1,15 @@
 <template>
   <div class="flex justify-center">
-    <div class="flex gap-10 text-center text-xl">
-      <button @click="prevMonth">prev</button>
+    <div class="m-4 flex gap-10 text-center font-serif text-2xl font-semibold">
+      <button @click="prevMonth">
+        ◀
+        <font-awesome-icon icon="fa-solid fa-angle-left" />
+      </button>
       <div>{{ monthName[month] }}, {{ year }}</div>
-      <button @click="nextMonth">next</button>
+      <button @click="nextMonth">▶</button>
     </div>
   </div>
-  <div class="grid border-collapse grid-cols-7 gap-10 border-4">
+  <div class="grid grid-cols-7 gap-10 border-4">
     <div class="mt-4">Mon</div>
     <div class="mt-4">Tue</div>
     <div class="mt-4">Wed</div>
@@ -14,9 +17,9 @@
     <div class="mt-4">Fri</div>
     <div class="mt-4">Sat</div>
     <div class="mt-4">Sun</div>
-    <div v-for="n in emptyDays" :key="n" class="bg-gray-500"></div>
-    <div v-for="day in days" :key="day">
-      <div :class="{ 'bg-green-500 text-white': isItToday(day) }">
+    <div v-for="n in emptyDays" :key="n"></div>
+    <div v-for="day in days" :key="day" class="hover:bg-slate-300">
+      <div :class="{ 'rounded bg-green-500 text-white': isItToday(day) }">
         {{ day.getDate() }}
       </div>
     </div>
@@ -34,7 +37,7 @@ export default {
         "March",
         "April",
         "May",
-        "june",
+        "June",
         "July",
         "August",
         "September",
