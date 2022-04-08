@@ -1,9 +1,7 @@
 <template>
   <div></div>
   <Calendar />
-  <div
-    class="flex flex-col gap-3 rounded bg-green-200 bg-gray-100 p-4 text-center"
-  >
+  <div class="flex flex-col gap-3 rounded bg-green-200 p-4 text-center">
     <div class="bg-orange-200">
       Sessión :
       <input v-model="sessión" class="border" />
@@ -37,9 +35,11 @@ export default {
   data() {
     return {
       sessión: "",
-      date: "",
+      date: "YYYY-MM-DD",
       hour: "",
+      //AQUÍ UN ARRAY Y SE LA PASO A CALENDAR
     };
   },
+  methods: {},
 };
 </script>
