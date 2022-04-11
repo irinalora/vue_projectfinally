@@ -35,9 +35,8 @@ export default {
   data() {
     return {
       sessión: "",
-      date: "YYYY-MM-DD",
+      date: "",
       hour: "",
-      //AQUÍ UN ARRAY Y SE LA PASO A CALENDAR
     };
   },
   methods: {},
