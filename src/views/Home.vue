@@ -16,7 +16,7 @@
     </div>
     <div class="flex justify-center">
       <button
-        @click="handleSubmit"
+        @click="addtoSessions(session)"
         class="gap-1 rounded bg-green-400 p-2 text-center"
       >
         Añadir
@@ -37,8 +37,13 @@ export default {
       sessión: "",
       date: "",
       hour: "",
+      allsessions: [],
     };
   },
-  methods: {},
+  methods: {
+    addtosessions(session) {
+      this.sessionsStore.allsessions.push(session);
+    },
+  },
 };
 </script>

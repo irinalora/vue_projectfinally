@@ -26,7 +26,12 @@
   </div>
 </template>
 <script>
+import { useSessions } from "../stores/pinia";
 export default {
+  setup() {
+    const sessionsStore = useSessions();
+    return { sessionsStore };
+  },
   data() {
     return {
       month: new Date().getMonth(),
