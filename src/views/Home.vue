@@ -34,15 +34,24 @@ export default {
   },
   data() {
     return {
-      sessión: "",
-      date: "",
-      hour: "",
-      allsessions: [],
+      allSessions: [
+        {
+          nom: "event1",
+          date: "",
+          hour: "",
+          nom: "event2",
+          date: "",
+          hour: "",
+          nom: "event3",
+          date: "",
+          hour: "",
+        },
+      ],
     };
   },
   methods: {
-    addtosessions(session) {
-      this.sessionsStore.allsessions.push(session);
+    addsession(session) {
+      this.allSessions.push(session);
     },
   },
 };
