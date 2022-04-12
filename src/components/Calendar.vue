@@ -10,13 +10,13 @@
     </div>
   </div>
   <div class="grid grid-cols-7 gap-10 border-4">
-    <div class="mt-4">Mon</div>
-    <div class="mt-4">Tue</div>
-    <div class="mt-4">Wed</div>
-    <div class="mt-4">Thu</div>
-    <div class="mt-4">Fri</div>
-    <div class="mt-4">Sat</div>
-    <div class="mt-4">Sun</div>
+    <div class="col-span-2 mt-2 text-lg font-medium md:col-span-1">Mon</div>
+    <div class="col-span-2 mt-2 text-lg font-medium md:col-span-1">Tue</div>
+    <div class="col-span-2 mt-2 text-lg font-medium md:col-span-1">Wed</div>
+    <div class="col-span-2 mt-2 text-lg font-medium md:col-span-1">Thu</div>
+    <div class="col-span-2 mt-2 text-lg font-medium md:col-span-1">Fri</div>
+    <div class="col-span-2 mt-2 text-lg font-medium md:col-span-1">Sat</div>
+    <div class="col-span-2 mt-2 text-lg font-medium md:col-span-1">Sun</div>
     <div v-for="n in emptyDays" :key="n"></div>
     <div v-for="day in days" :key="day" class="hover:bg-slate-300">
       <div :class="{ 'rounded bg-green-500 text-white': isItToday(day) }">
@@ -96,9 +96,7 @@ export default {
         someDate.getFullYear() == today.getFullYear()
       );
     },
-    allinformation() {
-      return;
-    },
+    allinformation() {},
   },
 };
 </script>
