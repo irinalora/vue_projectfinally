@@ -96,6 +96,9 @@ export default {
         someDate.getFullYear() == today.getFullYear()
       );
     },
+    allinformation() {
+      return;
+    },
   },
 };
 </script>
