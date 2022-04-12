@@ -27,6 +27,7 @@
 </template>
 <script>
 export default {
+  props: ["allSessions"],
   data() {
     return {
       month: new Date().getMonth(),

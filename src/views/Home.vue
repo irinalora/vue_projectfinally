@@ -3,12 +3,12 @@
   <Calendar />
   <div class="flex flex-col gap-3 rounded bg-green-200 p-4 text-center">
     <div class="bg-orange-200">
-      Sessión :
-      <input v-model="sessión" class="border" />
+      Session :
+      <input v-model="name" class="border" />
     </div>
     <div>
       Fecha :
-      <input v-model="date" class="border" />
+      <input type="date" v-model="date" class="border" />
     </div>
     <div>
       Hour :
@@ -16,7 +16,7 @@
     </div>
     <div class="flex justify-center">
       <button
-        @click="addtoSessions(session)"
+        @click="addtoSessions"
         class="gap-1 rounded bg-green-400 p-2 text-center"
       >
         Añadir
@@ -34,23 +34,19 @@ export default {
   },
   data() {
     return {
-      allSessions: [
-        {
-          nom: "event1",
-          date: "",
-          hour: "",
-          nom: "event2",
-          date: "",
-          hour: "",
-          nom: "event3",
-          date: "",
-          hour: "",
-        },
-      ],
+      name: "",
+      date: "",
+      hour: "",
+      allSessions: [],
     };
   },
   methods: {
-    addsession(session) {
+    addtoSessions() {
+      const session = {
+        name: this.name,
+        date: this.date,
+        hour: this.hour,
+      };
       this.allSessions.push(session);
     },
   },
