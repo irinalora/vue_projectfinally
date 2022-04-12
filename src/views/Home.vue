@@ -1,6 +1,6 @@
 <template>
   <div></div>
-  <Calendar />
+  <Calendar :showSessions="allSessions" />
   <div class="flex flex-col gap-3 rounded bg-green-200 p-4 text-center">
     <div class="bg-orange-200">
       Session :

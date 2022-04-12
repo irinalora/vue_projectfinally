@@ -20,14 +20,14 @@
     <div v-for="n in emptyDays" :key="n"></div>
     <div v-for="day in days" :key="day" class="hover:bg-slate-300">
       <div :class="{ 'rounded bg-green-500 text-white': isItToday(day) }">
-        {{ day.getDate() }}
+        {{ day.getDate() }} {{ showSessions }}
       </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  props: ["allSessions"],
+  props: ["showSessions"],
   data() {
     return {
       month: new Date().getMonth(),
